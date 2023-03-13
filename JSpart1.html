@@ -11,12 +11,18 @@
             color:white;
         }
 
+        #input {
+            margin-bottom: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
         #mainDiv {
             display: flex;
             background-color: lightgreen;
             color: white; 
-            padding-right: 5px;
-            padding-left: 5px;
+            padding-right: 100px;
+            padding-left: 100px;
             border-radius: 10px;
             cursor: pointer;
         }
@@ -25,24 +31,51 @@
             background-color: green;
         }
 
+        #mainDiv:active {
+            background-color: lightgreen;
+        }
+
         #secondText {
             color: #ffffff;
             font-size: 18px;
+        }
+
+        #messageDiv {
+            color: #282828;
         }
 
 
 
     
     </style>
+
+
     <body id="body">
 
         <h1 id="firstText">
             
         </h1>
 
-        <div id="mainDiv" >
-            <h3 id="secondText">Show me alert</h3>
+
+        <div>
+            <input type="text" id="input"/>
+
         </div>
+
+        <div id="mainDiv">
+            <h3 id="secondText">Done</h3>
+        </div>
+
+
+
+
+        <div id="messageDiv">
+
+            <h4 id="messageElement">
+               
+            </h4>
+        </div>
+
 
     </body>
 
@@ -50,15 +83,35 @@
 
         const textValue = "Learning JavaScript part 1";
 
-        document.getElementById("firstText").innerHTML = textValue;
+        // get html element 
+        document.getElementById("firstText").innerHTML = textValue; // innerHtml means the inside of the element
 
-        function testFunction () {
 
-            const haider = "haider";
-            console.log(haider)
+        // function declaration using method 1
+        function zaidFunction () {
+
+            const value = "haider";
+            alert(value);
         }
 
-        testFunction();
+
+        // function declartion using method 2
+        const zaidFunction2 = () => {
+
+        }
+
+
+        document.getElementById("mainDiv").addEventListener("click", 
+            function () {
+               const inputValue = document.getElementById("input").value;
+               document.getElementById("messageElement").innerHTML = "this is your name: " + inputValue;
+            }
+        );
+
+
+
+            
+       
          
 
         
