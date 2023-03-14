@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<style>
+  .switch {
+    width: 40px;
+    height: fit-content;
+    background-color: #242c46;
+    padding: 2.5px;
+    border-radius: 100px;
+    cursor: pointer;
+  }
+
+  .slider {
+    display:flex;
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    border-radius: 15px;
+    margin-left:auto;
+  }
+</style>
+
+<html>
+  <body>
+    <div id="mainDiv">
+      <div>calc</div>
+
+      <div><h4>THEME</h4></div>
+
+      <div>1 2 3</div>
+
+      <div class="switch" id="switchId"> <div class="slider" id="sliderId">
+        
+    </div>
+  </body>
+
+  <script>
+    const slider= document.getElementById("slinderId");
+    slinder.style.marginLeft = "0px";
+    document.getElementById("swithId").addEventListener("click", () => {
+        if(slinder.style.marginLeft = "0px"){
+            slinder.style.marginLeft="auto";
+        } else if(slinder.style.marginLeft === "auto"){
+            slinder.style.marginLeft="0px";
+        }
+    } );
+
+   
+    
+
+
+  </script>
+
+
+</html>
