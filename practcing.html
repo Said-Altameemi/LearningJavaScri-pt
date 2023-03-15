@@ -16,8 +16,9 @@
     width: 10px;
     height: 10px;
     border-radius: 15px;
-    margin-left:auto;
+    margin-left:"auto";
   }
+  
 </style>
 
 <html>
@@ -29,25 +30,29 @@
 
       <div>1 2 3</div>
 
-      <div class="switch" id="switchId"> <div class="slider" id="sliderId">
-        
+      <div class="switch" id="switchId"> <div class="slider" id="sliderId"></div>
+      
+        <div input>
+
+        </div>
     </div>
   </body>
 
   <script>
-    const slider= document.getElementById("slinderId");
-    slinder.style.marginLeft = "0px";
-    document.getElementById("swithId").addEventListener("click", () => {
-        if(slinder.style.marginLeft = "0px"){
-            slinder.style.marginLeft="auto";
-        } else if(slinder.style.marginLeft === "auto"){
-            slinder.style.marginLeft="0px";
+
+    const slider =document.getElementById("sliderId");
+
+    slider.style.marginLeft= "0px";
+
+
+    document.getElementById("switchId").addEventListener("click", ()=>{
+      if(slider.style.marginLeft=== "0px"){
+        slider.style.marginLeft="auto";}
+        else if(slider.style.marginLeft=== "auto"){
+          slider.style.marginLeft="0px";
         }
-    } );
 
-   
-    
-
+  } );
 
   </script>
 
